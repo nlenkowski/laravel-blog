@@ -20,6 +20,3 @@ require('./bootstrap');
 // const app = new Vue({
 //     el: '#app'
 // });
-
-const hello = 'hello2';
-console.log(hello)
