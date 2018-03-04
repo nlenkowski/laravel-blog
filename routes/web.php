@@ -13,4 +13,28 @@
 
 Route::get('/', 'PostsController@index');
 
-Route::get('/posts/{post}', 'PostsController@show');
+Route::get('/posts/create', 'PostsController@create');
+
+Route::post('/posts', 'PostsController@store');
+
+//Route::get('/posts/{post}', 'PostsController@show');
+
+/*
+Posts endpoints
+---------------
+
+GET /posts // Show all posts
+
+GET /posts/{id} // Show one post
+
+GET /posts/create // Form to create a post
+
+POST /posts // Store new post in database
+
+GET /posts/{id}/edit // Form to edit an existing post
+
+PATCH /posts/{id} // Patch existing post
+
+DELETE /posts/{id} // Delete existing post
+
+*/
