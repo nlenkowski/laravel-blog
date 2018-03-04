@@ -15,7 +15,7 @@
 
     <div class="container">
       @include('layouts.header')
-      @include('partials.jumbotron')
+      {{--  @include('partials.jumbotron')  --}}
     </div>
 
     <main role="main" class="container">
