@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Blog Template for Bootstrap</title>
+    <title>Blog @yield('title')</title>
     <link rel="icon" href="favicon.ico">
     <link href="/css/app.css" rel="stylesheet">
   </head>

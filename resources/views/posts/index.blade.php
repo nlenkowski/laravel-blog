@@ -1,5 +1,7 @@
 @extends('layouts.master')
 
+@section('title', '– All Posts')
+
 @section('content')
 
   <div class="col-md-8 blog-main">
