@@ -37,6 +37,12 @@ class PostsController extends Controller
         //dd(request('title'));
         //dd(request(['title', 'body']));
 
+        // Validate request
+        $this->validate(request(), [
+            'title' => 'required|max:10',
+            'body' => 'required'
+        ]);
+
         // Manually assign each field and save to database
         // $post = new Post;
         // $post->title = request('title');

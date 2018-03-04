@@ -11,6 +11,8 @@
   <form method="POST" action="/posts">
     @csrf
 
+    @include('partials.errors')
+
     <div class="form-group">
       <label for="title">Title:</label>
     <input type="text" class="form-control" id="title" name="title" value="{{ $title }}">
@@ -18,10 +20,12 @@
 
     <div class="form-group">
       <label for="title">Body:</label>
-      <textarea class="form-control" id="body" name="body">{{ $body }}</textarea>
+    <textarea class="form-control" id="body" name="body">{{ $body }}</textarea>
     </div>
 
-    <button type="submit" class="btn btn-primary">Publish</button>
+    <div class="form-group">
+      <button type="submit" class="btn btn-primary">Publish</button>
+    </div>
   </form>
 
 </div>
