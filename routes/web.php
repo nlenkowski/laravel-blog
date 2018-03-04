@@ -13,8 +13,4 @@
 
 Route::get('/', 'PostsController@index');
 
-// controller => PostsController
-
-// Eloquent model => Post
-
-// Migration => create_posts_table
+Route::get('/posts/{post}', 'PostsController@show');

@@ -6,10 +6,16 @@ use Illuminate\Http\Request;
 
 class PostsController extends Controller
 {
-    // Add controller action for index view
+
+    // Controller actions
     public function index()
     {
         return view('posts.index');
+    }
+
+    public function show()
+    {
+        return view('posts.show');
     }
 
 }
