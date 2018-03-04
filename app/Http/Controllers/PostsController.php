@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 use App\Post;
 
@@ -22,7 +23,10 @@ class PostsController extends Controller
 
     public function create()
     {
-        return view('posts.create');
+        return view('posts.create', [
+            'title' => Str::random(10),
+            'body' => Str::random(20)
+        ]);
     }
 
     public function store()
