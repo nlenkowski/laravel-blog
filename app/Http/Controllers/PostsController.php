@@ -34,10 +34,17 @@ class PostsController extends Controller
         //dd(request(['title', 'body']));
 
         // Manually assign each field and save to database
-        $post = new Post;
-        $post->title = request('title');
-        $post->body = request('body');
-        $post->save();
+        // $post = new Post;
+        // $post->title = request('title');
+        // $post->body = request('body');
+        // $post->save();
+
+        // Mass assign all fields and save to database
+        // Note: Must add "protected $fillable = ['title', 'body'];" to post model
+        Post::create([
+            'title' => request('title'),
+            'body' => request('body')
+        ]);
 
         // Redirect to home page
         return redirect('/');
