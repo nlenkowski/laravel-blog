@@ -13,7 +13,9 @@ class PostsController extends Controller
     // Controller actions
     public function index()
     {
-        $posts = Post::all();
+        //$posts = Post::orderBy('created_at', 'asc')->get();
+        $posts = Post::latest()->get();
+
         return view('posts.index', compact('posts'));
     }
 
