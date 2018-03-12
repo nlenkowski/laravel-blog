@@ -26,6 +26,8 @@
       </div>
     </main>
 
+    <div id="app"></div>
+
     @include('layouts.footer')
 
   </body>
