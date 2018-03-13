@@ -14,8 +14,13 @@
         <strong>{{ $comment->created_at->diffForHumans() }} </strong>
         <br>
         {{ $comment->body }}
-        <br>
-        <a href="/comments/{{ $comment->id }}/delete">Delete</a>
+        <form method="POST" action="/comments/{{ $comment->id }}">
+          <div class="form-group">
+            {{ csrf_field() }}
+            {{ method_field('DELETE') }}
+            <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+          </div>
+        </form>
       </li>
     </ul>
     @endforeach

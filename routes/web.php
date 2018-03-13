@@ -27,7 +27,7 @@ Route::get('/posts/{post}', 'PostsController@show');
 Route::post('/posts/{post}/comments', 'CommentsController@store');
 
 // Delete a comment
-Route::get('/comments/{comment}/delete', 'CommentsController@delete');
+Route::delete('/comments/{comment}', 'CommentsController@delete');
 
 
 /*
