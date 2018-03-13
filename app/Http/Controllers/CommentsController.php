@@ -16,4 +16,12 @@ class CommentsController extends Controller
 
         return back();
     }
+
+    // Delete a comment
+    public function delete(Comment $comment)
+    {
+        $comment->delete();
+
+        return back();
+    }
 }

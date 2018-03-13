@@ -12,7 +12,10 @@
       @foreach ($post->comments as $comment)
       <li class="list-group-item">
         <strong>{{ $comment->created_at->diffForHumans() }} </strong>
-        <br> {{ $comment->body }}
+        <br>
+        {{ $comment->body }}
+        <br>
+        <a href="/comments/{{ $comment->id }}/delete">Delete</a>
       </li>
     </ul>
     @endforeach
