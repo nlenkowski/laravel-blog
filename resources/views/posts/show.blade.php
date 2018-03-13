@@ -35,8 +35,9 @@
 
   @include('partials.errors')
 
-  <form method="POST" action="/posts/{{ $post->id }}/comments">
+  <form method="POST" action="/comments">
     {{ csrf_field() }}
+    <input type="hidden" name="post_id" value="{{ $post->id }}">
     <div class="form-group">
       <textarea name="body" class="form-control" placeholder="Your message" required></textarea>
     </div>
