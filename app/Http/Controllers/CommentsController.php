@@ -22,6 +22,6 @@ class CommentsController extends Controller
     {
         $comment->delete();
 
-        return back();
+        return back()->with('status', 'Comment deleted!');
     }
 }

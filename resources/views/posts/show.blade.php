@@ -8,6 +8,9 @@
 
   <div class="comments">
     <h3>Comments</h3>
+
+    @include('partials.status')
+
     <ul class="list-group">
       @foreach ($post->comments as $comment)
       <li class="list-group-item">
