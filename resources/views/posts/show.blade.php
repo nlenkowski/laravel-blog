@@ -21,10 +21,13 @@
   <br>
 
   <h5>Add Comment</h5>
+
+  @include('partials.errors')
+
   <form method="POST" action="/posts/{{ $post->id }}/comments">
     {{ csrf_field() }}
     <div class="form-group">
-      <textarea name="body" class="form-control" placeholder>Your message</textarea>
+      <textarea name="body" class="form-control" placeholder="Your message" required></textarea>
     </div>
     <div class="form-group">
       <button type="submit" class="btn btn-primary">Add Comment</button>
