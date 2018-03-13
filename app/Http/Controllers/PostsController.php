@@ -59,6 +59,6 @@ class PostsController extends Controller
         Post::create(request(['title', 'body']));
 
         // Redirect to home page
-        return redirect('/');
+        return redirect('/')->with('status', 'Post created!');
     }
 }

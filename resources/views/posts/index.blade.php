@@ -9,7 +9,9 @@
       From the Firehose
     </h3>
 
-    <p><a href="/posts/create" class="btn btn-primary btn-sm">New Post</a></p>
+    @include('partials.status')
+
+    <p><a href="/posts/create" class="btn btn-success">Create Post</a></p>
 
     @foreach($posts as $post)
       @include('posts.post')
