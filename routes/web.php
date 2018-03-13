@@ -11,14 +11,19 @@
 |
 */
 
+// Show all posts
 Route::get('/', 'PostsController@index');
 
+// Form to create a post
 Route::get('/posts/create', 'PostsController@create');
 
+// Store a post in the database
 Route::post('/posts', 'PostsController@store');
 
+// Show a post
 Route::get('/posts/{post}', 'PostsController@show');
 
+// Store a comment
 Route::post('/posts/{post}/comments', 'CommentsController@store');
 
 

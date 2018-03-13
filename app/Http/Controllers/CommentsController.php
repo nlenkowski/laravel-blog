@@ -7,6 +7,7 @@ use App\Comment;
 
 class CommentsController extends Controller
 {
+    // Create new comment
     public function store(Post $post)
     {
         $this->validate(request(), ['body' => 'required|min:2']);
