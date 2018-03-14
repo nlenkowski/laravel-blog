@@ -30,6 +30,20 @@ Route::post('/comments', 'CommentsController@store');
 Route::delete('/comments/{comment}', 'CommentsController@delete');
 
 
+// Create user
+Route::get('/register', 'RegistrationController@create');
+
+// Store user
+Route::post('/register', 'RegistrationController@store');
+
+
+// Login user
+Route::post('/login', 'SessionsController@create');
+
+// Logout user
+Route::get('/logout', 'SessionsController@destroy');
+
+
 /*
 Posts endpoints
 ---------------
