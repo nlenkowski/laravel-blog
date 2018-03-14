@@ -4,7 +4,7 @@
 <div class="col-md-8 blog-main">
   <h1>Login</h1>
 
-  @include ('partials.status')
+  @include ('partials.errors')
 
   <form action="/login" method="POST">
       @csrf
