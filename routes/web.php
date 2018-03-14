@@ -31,20 +31,20 @@ Route::delete('/comments/{comment}', 'CommentsController@delete');
 
 
 // Create user
-Route::get('/register', 'RegistrationController@create');
+Route::get('/register', 'RegistrationController@create')->name('register');
 
 // Store user
 Route::post('/register', 'RegistrationController@store');
 
 
 // Login user
-Route::get('/login', 'SessionsController@create');
+Route::get('/login', 'SessionsController@create')->name('login');
 
 // Store user
 Route::post('/login', 'SessionsController@store');
 
 // Logout user
-Route::get('/logout', 'SessionsController@destroy');
+Route::get('/logout', 'SessionsController@destroy')->name('logout');
 
 
 /*
