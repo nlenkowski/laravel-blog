@@ -38,7 +38,10 @@ Route::post('/register', 'RegistrationController@store');
 
 
 // Login user
-Route::post('/login', 'SessionsController@create');
+Route::get('/login', 'SessionsController@create');
+
+// Store user
+Route::post('/login', 'SessionsController@store');
 
 // Logout user
 Route::get('/logout', 'SessionsController@destroy');
