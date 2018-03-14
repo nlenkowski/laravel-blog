@@ -5,7 +5,7 @@
     </div>
     <div class="col-4 d-flex justify-content-end align-items-center">
       @if (Auth::check())
-        Welcome <a href="/profile" class="ml-1 text-capitalize">{{ Auth::user()->name }}</a>
+        Welcome <a href="/home" class="ml-1 text-capitalize">{{ Auth::user()->name }}</a>
         <a class="btn btn-sm btn-outline-secondary ml-1" href="/logout">Logout</a>
       @else
         <a class="btn btn-sm btn-outline-secondary ml-1" href="/register">Register</a>
