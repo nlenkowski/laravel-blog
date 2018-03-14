@@ -1,7 +1,7 @@
 @extends ('layouts.master')
 
 @section ('content')
-<div class="col-md-8">
+<div class="col-md-8 blog-main">
     <h1>Register</h1>
 
     @include ('partials.errors')
