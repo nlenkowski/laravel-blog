@@ -10,7 +10,13 @@ use App\Post;
 class PostsController extends Controller
 {
 
-    // Controller actions
+    // Protect all routes other than index and show
+    public function __construct()
+    {
+        $this->middleware('auth')->except(['index', 'show']);
+    }
+
+    // Show all posts
     public function index()
     {
         //$posts = Post::orderBy('created_at', 'asc')->get();
