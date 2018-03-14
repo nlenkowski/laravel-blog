@@ -25,13 +25,13 @@ class PostsController extends Controller
         return view('posts.index', compact('posts'));
     }
 
-    // Show posts
+    // Show post
     public function show(Post $post)
     {
         return view('posts.show', compact('post'));
     }
 
-    // Form to create a new post
+    // Create post
     public function create()
     {
         return view('posts.create', [
@@ -40,7 +40,7 @@ class PostsController extends Controller
         ]);
     }
 
-    // Store a new post in the database
+    // Store post
     public function store()
     {
 
