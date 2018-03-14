@@ -15,12 +15,12 @@
 
     <div class="form-group">
       <label for="title">Title:</label>
-    <input type="text" class="form-control" id="title" name="title" value="{{ $title }}">
+      <input type="text" class="form-control" id="title" name="title" value="My Post">
     </div>
 
     <div class="form-group">
       <label for="title">Body:</label>
-    <textarea class="form-control" id="body" name="body">{{ $body }}</textarea>
+      <textarea class="form-control" id="body" name="body">My amazing post body.</textarea>
     </div>
 
     <div class="form-group">

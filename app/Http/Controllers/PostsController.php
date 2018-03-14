@@ -29,8 +29,8 @@ class PostsController extends Controller
     public function create()
     {
         return view('posts.create', [
-            'title' => Str::random(10),
-            'body' => Str::random(20)
+            // 'title' => Str::random(10),
+            // 'body' => Str::random(20)
         ]);
     }
 
