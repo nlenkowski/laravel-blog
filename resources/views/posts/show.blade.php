@@ -14,9 +14,9 @@
     <ul class="list-group">
       @foreach ($post->comments as $comment)
       <li class="list-group-item">
-        <strong>{{ $comment->created_at->diffForHumans() }} </strong>
+        <strong>{{ $comment->created_at->diffForHumans() }} </strong> by {{ $comment->user->name }}
         <br>
-        {{ $comment->body }}
+        <p>{{ $comment->body }}</p>
         <form method="POST" action="/comments/{{ $comment->id }}">
           <div class="form-group">
             {{ csrf_field() }}
