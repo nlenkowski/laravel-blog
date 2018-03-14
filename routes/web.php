@@ -12,21 +12,21 @@
 */
 
 // Show all posts
-Route::get('/', 'PostsController@index');
+Route::get('/', 'PostsController@index')->name('home');
 
-// Form to create a post
+// Create post
 Route::get('/posts/create', 'PostsController@create');
 
-// Store a post in the database
+// Store post
 Route::post('/posts', 'PostsController@store');
 
-// Show a post
+// Show post
 Route::get('/posts/{post}', 'PostsController@show');
 
-// Store a comment
+// Store comment
 Route::post('/comments', 'CommentsController@store');
 
-// Delete a comment
+// Delete comment
 Route::delete('/comments/{comment}', 'CommentsController@delete');
 
 
