@@ -21,7 +21,9 @@
 
     <main role="main" class="container">
       <div class="row">
-        @yield('content')
+        <div class="content">
+          @yield('content')
+        </div>
         @include('layouts.sidebar')
       </div>
     </main>
