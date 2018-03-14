@@ -51,7 +51,7 @@ class PostsController extends Controller
 
         // Validate request
         $this->validate(request(), [
-            'title' => 'required|max:10',
+            'title' => 'required',
             'body' => 'required'
         ]);
 
@@ -62,7 +62,11 @@ class PostsController extends Controller
         // $post->save();
 
         // Mass assign all fields and save to database
-        Post::create(request(['title', 'body']));
+        Post::create([
+            'title' => request('title'),
+            'body' => request('body'),
+            'user_id' => auth()->id()
+        ]);
 
         // Redirect to home page
         return redirect('/')->with('status', 'Post created!');
