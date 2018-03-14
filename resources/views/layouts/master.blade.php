@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -10,25 +10,25 @@
     <title>Blog @yield('title')</title>
     <link rel="icon" href="favicon.ico">
     <link href="/css/app.css" rel="stylesheet">
-  </head>
+</head>
 
-  <body>
+<body>
 
-    <div class="container">
-      @include('layouts.header')
-      {{--  @include('partials.jumbotron')  --}}
-    </div>
+<div class="container">
+    @include('layouts.header')
+    {{--  @include('partials.jumbotron')  --}}
+</div>
 
-    <main role="main" class="container">
-      <div class="row">
+<main role="main" class="container">
+    <div class="row">
         @yield('content')
         @include('layouts.sidebar')
-      </div>
-    </main>
+    </div>
+</main>
 
-    <div id="app"></div>
+<div id="app"></div>
 
-    @include('layouts.footer')
+@include('layouts.footer')
 
-  </body>
+</body>
 </html>
